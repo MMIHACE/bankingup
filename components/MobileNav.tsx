@@ -15,7 +15,7 @@ import {
 import {cn} from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import { sidebarLinks } from '@/constants'
-// import Footer from "./Footer"
+import Footer from "./Footer"
 
 
 const MobileNav = ({user}:
@@ -86,7 +86,7 @@ height={20}
 USER
     </nav>
     </SheetClose>
- {/* <Footer user={user} type='mobile'/> */}
+ <Footer user={user} type='mobile'/>
 </div>
   </SheetContent>
 </Sheet>

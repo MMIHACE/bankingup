@@ -10,8 +10,7 @@ export default function RootLayout({
      
      <main className="flex min-h-screen w-full justify-between font-inter">
      {children}
-     SIDEBAR
-     {/* <div className=" auth-asset">
+     <div className=" auth-asset">
       <div>
     <Image
     src='/icons/auth-image.svg' 
@@ -21,7 +20,7 @@ export default function RootLayout({
     className="rounded-1-x1 object-contain"
     />
     </div>
-     </div> */}
+     </div>
      </main>
     );
   }
