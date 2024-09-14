@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 
-// // import PlaidLink from './PlaidLink';
+import PlaidLink from './PlaidLink';
 
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -54,21 +54,21 @@ const form = useForm<z.infer<typeof formSchema>>({
     setIsLoading(true);
     try{
         if (type === 'sign-up') {
-            // const userData = {
-            //     firstName: data.firstName!,
-            //     lastName: data.lastName!,
-            //     address1: data.address1!,
-            //     city: data.city!,
-            //     state: data.state!,
-            //     postalCode: data.postalCode!,
-            //     dateOfBirth: data.dateOfBirth!,
-            //     ssn: data.ssn!,
-            //     email: data.email,
-            //     password: data.password
-            // }
-        const newUser = await  signUp(data);
+            const userData = {
+                firstName: data.firstName!,
+                lastName: data.lastName!,
+                address1: data.address1!,
+                city: data.city!,
+                state: data.state!,
+                postalCode: data.postalCode!,
+                dateOfBirth: data.dateOfBirth!,
+                ssn: data.ssn!,
+                email: data.email,
+                password: data.password
+            }
+        const newUser = await  signUp(userData);
+
             setUser(newUser);
-            
         }
 
         if ( type === 'sign-in'){
@@ -124,9 +124,9 @@ items-center gap-1 '
     </header>
     {user ? (
         <div className='flex flex-col gap-4'>
-          {/* <PlaidLink  user={user} variant='primary'/> */}
+          <PlaidLink  user={user} variant='primary'/>
         </div>
-        ): (  
+         ): (   
 
         <>
 
@@ -198,7 +198,7 @@ items-center gap-1 '
         </Link>
     </footer>
         </>
-    )} 
+     )}  
     </section>
   )
 }
