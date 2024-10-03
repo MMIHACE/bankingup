@@ -33,7 +33,7 @@ declare type User = {
   dwollaCustomerId: string;
   firstName: string;
   lastName: string;
-  name:string,
+  name: string;
   address1: string;
   city: string;
   state: string;
@@ -60,7 +60,7 @@ declare type Account = {
   type: string;
   subtype: string;
   appwriteItemId: string;
-  sharableId: string;
+  shareableId: string;
 };
 
 declare type Transaction = {
@@ -89,7 +89,7 @@ declare type Bank = {
   accessToken: string;
   fundingSourceUrl: string;
   userId: string;
-  sharableId: string;
+  shareableId: string;
 };
 
 declare type AccountTypes =
@@ -179,14 +179,14 @@ declare interface PlaidLinkProps {
   dwollaCustomerId?: string;
 }
 
-// declare type User = sdk.Models.Document & {
-//   accountId: string;
-//   email: string;
-//   name: string;
-//   items: string[];
-//   accessToken: string;
-//   image: string;
-// };
+declare type User = sdk.Models.Document & {
+  accountId: string;
+  email: string;
+  name: string;
+  items: string[];
+  accessToken: string;
+  image: string;
+};
 
 declare interface AuthFormProps {
   type: "sign-in" | "sign-up";
@@ -203,7 +203,7 @@ declare interface BankTabItemProps {
   appwriteItemId?: string;
 }
 
-declare interface TotlaBalanceBoxProps {
+declare interface TotalBalanceBoxProps {
   accounts: Account[];
   totalBanks: number;
   totalCurrentBalance: number;
@@ -218,6 +218,7 @@ declare interface RightSidebarProps {
   user: User;
   transactions: Transaction[];
   banks: Bank[] & Account[];
+ 
 }
 
 declare interface SiderbarProps {

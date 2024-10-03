@@ -7,6 +7,8 @@ import Link from 'next/link'
 import {cn} from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 import Footer from './Footer'
+import  PlaidLink  from './PlaidLink'
+
 
 
 
@@ -56,7 +58,7 @@ items-center gap-2'
         </Link>
     )
 })}
-USER
+<PlaidLink user={user} />
    </nav>
 <Footer user={user}/>
     </section>
